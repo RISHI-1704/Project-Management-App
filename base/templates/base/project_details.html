@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="project-card">
+  <h2 class="project-header">{{ project.name }}</h2>
+
+  <p><strong>Description: </strong>{{ project.description }}</p>
+  {% if tasks %}
+  <p><strong>Tasks</strong></p>
+  <ul class="list-unstyled task-list">
+    {% for task in tasks %}
+    <li class="mb-3">
+      <a href="{% url 'edit-task' task.id %}" class="project-header">{{ task.name }}</a>
+
+      <div class="assigned-users">
+        Assigned to:
+        <ul class="list-unstyled">
+          {% for user in task.users.all %}
+          <li>
+            {{ user.username }}
+            <a href="{% url 'remove-user' task.id user.id %}" class="btn btn-danger ml-2">Remove User</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </li>
+    {% endfor %}
+    {% else %}
+    <p>No tasks added.</p>
+    {% endif %}
+  </ul>
+
+  <a href="{% url 'projects' %}" class="btn btn-primary mt-3">Back</a>
+</div>
+{% endblock %}

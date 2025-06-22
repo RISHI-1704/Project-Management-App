@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% block content %}
+<h3>Are you sure you want to remove {{ user.username }} from task: {{ task.name }}?</h3>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Confirm Remove" class="btn btn-danger">
+</form>
+
+<a href="{% url 'project-details' task.project.id %}">Cancel</a>
+
+{% endblock %}

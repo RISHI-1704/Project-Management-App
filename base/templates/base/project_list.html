@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="project-details">
+  <h2>Project Management App</h2>
+
+  <div class="action-buttons">
+    <a class="btn btn-primary" href="{% url 'create-project' %}">Create New Project</a>
+    <a class="btn btn-primary" href="{% url 'create-user' %}">Create New User</a>
+    {% if projects %}
+    <a class="btn btn-primary" href="{% url 'create-tasks' %}">Add Tasks</a>
+    {% else %}
+    <p></p>
+    {% endif %}
+    <a class="btn btn-primary" href="{% url 'all-users' %}">All Users</a>
+  </div>
+
+  <p></p>
+  <div class="project-list">
+    {% if projects %}
+    {% for project in projects %}
+    <div class="project-card">
+      <h3 class="title-sub">Projects</h3>
+      <div class="project-header">
+        <h4>
+          <a href="{% url 'project-details' project.id %}">{{ project.name }}</a>
+        </h4>
+        <span class="creator">Created by: {{ project.created_by }}</span>
+      </div>
+
+      <div class="project-actions">
+        <a class="delete-btn btn btn-danger" href="{% url 'delete-project' project.id %}">Delete Project</a>
+      </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No Projects at the moment.</p>
+    {% endif %}
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+{% block content %}
+<h2 class="title-sub">Create Profile</h2>
+<form class="form card" method="post" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input class="btn btn-success" type="submit" value="submit">
+</form>
+<a class="btn btn-primary" href="{% url 'projects' %}"> Back to Projects</a>
+{% endblock %}

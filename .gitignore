@@ -1,0 +1,26 @@
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django database file (if using SQLite)
+db.sqlite3
+
+# Ignore collected static files (adjust folder name if needed)
+staticfiles/
+
+# Environment variables file (if any)
+.env
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

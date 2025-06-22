@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+{% block content %}
+<h3 class="title-sub">Are you sure you want to delete: {{task.name}}</h3>
+<form class="form card" action="" method="Post">
+    {% csrf_token %}
+    <input class="btn btn-danger" type="submit" value="submit">
+</form>
+<a class="btn btn-primary" href="{% url 'projects' %}">Cancel</a>
+{% endblock %}

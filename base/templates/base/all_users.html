@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="card">
+    <h2 class="title-sub">All Users</h2>
+    <ul class="list-unstyled">
+        {% for user in users %}
+        <li style="margin-bottom: 10px;">
+            <span style="font-weight: 500;">{{ user.user.username }}</span>
+            <a href="{% url 'delete-user' user.user.id %}" class="btn btn-danger" style="margin-left: 10px;">Delete
+                User</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<a class="btn btn-primary" href="{% url 'projects' %}">Back</a>
+{% endblock %}

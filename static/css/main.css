@@ -1,0 +1,127 @@
+body {
+    background-color: black; 
+    color: #343a40; 
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.title-sub {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.card {
+    background: #d0f0fd; 
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #c0d6e4;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea,
+.form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+    user-select: none;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #2c7a7b; 
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #285e61;
+}
+
+.btn-success {
+    background-color: #38a169; 
+    color: white;
+}
+.btn-success:hover {
+    background-color: #2f855a;
+}
+
+.btn-danger {
+    background-color: #e53e3e; 
+    color: white;
+    padding: 6px 14px; 
+    font-size: 0.85rem;
+}
+.btn-danger:hover {
+    background-color: #9b2c2c;
+}
+
+.list-unstyled {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #dff6e4; 
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #c3d9c8;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.1);
+}
+
+.project-header h4 {
+    margin: 0;
+    color: #2c7a7b;
+    font-weight: 700;
+}
+
+.project-header .creator {
+    font-size: 0.9rem;
+    color: #4a5568; 
+}
+
+.project-actions {
+    margin-top: 10px;
+}
+
+.task-list li {
+    margin-bottom: 10px;
+}
+
+.assigned-users ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
